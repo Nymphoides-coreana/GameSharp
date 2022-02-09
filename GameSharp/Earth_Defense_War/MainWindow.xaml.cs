@@ -12,6 +12,7 @@
 //
 //    You should have received a copy of the GNU General Public License
 //    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+using Earth_Defense_War.GameItems;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -41,6 +42,11 @@ namespace Earth_Defense_War
 
             Width = App.GetApp().Width;
             Height = App.GetApp().Height;
+
+            AboutMe about = new AboutMe();
+            if (!about.ISIAgree())
+                about.ShowDialog();
+            
         }
     }
 }
