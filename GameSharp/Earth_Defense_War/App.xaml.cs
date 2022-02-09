@@ -19,7 +19,7 @@ namespace Earth_Defense_War
         }
         public const string GameTitle = "Earth Defense War 地球防卫战";
 
-        public const string VersionInfo = "Earth Defense War 地球防卫战 2.0\n2022年";
+        public const string VersionInfo = "Earth Defense War 地球防卫战 2.0\n2022年制造";
 
         public int Height { get; set; } = 700;
         public int Width { get; set; } = 500;
