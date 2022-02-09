@@ -65,7 +65,7 @@ namespace Earth_Defense_War.GameItems
 
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <https://www.gnu.org/licenses/>.";
-            if (File.Exists("IAGREE"))
+            if (File.Exists("License"))
             {
                 IAgree = true;
                 YesBtn.Visibility = Visibility.Hidden;
@@ -96,9 +96,9 @@ namespace Earth_Defense_War.GameItems
         private void Yes(object sender, RoutedEventArgs e)
         {
             IAgree = true;
-            using (StreamWriter sw = new StreamWriter(new FileStream("IAGREE", FileMode.OpenOrCreate)))
+            using (StreamWriter sw = new StreamWriter(new FileStream("License", FileMode.OpenOrCreate)))
             {
-                sw.Write("YES");
+                sw.Write(nameof(Yes));
             }
             Close();
         }
